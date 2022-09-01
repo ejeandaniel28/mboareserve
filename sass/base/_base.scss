@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Readex+Pro:wght@200;300;400;600&display=swap');
+
+
+
+$font-family1: 'Noto Serif JP', serif;
+$font-family2: 'Readex Pro', sans-serif;
+
+
+* , ::after , ::before {
+    font-family: $font-family1,$font-family2;
+    padding: 0;
+    margin: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
