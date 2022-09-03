@@ -14,13 +14,16 @@
             <img src="./images/logo.svg" class="header_logo img" alt="MBOA RESERVATION">
         </div>
         <nav class="header_menu">
-            <span class="material-symbols-outlined iconmenu">menu</span>
-            <span class="material-symbols-outlined iconcontact">phone_enabled</span>
+            <div class="header_menu mobile-menu">
+                <a href="#menu"><span class="material-symbols-outlined iconmenu"> menu </span></a>
+                <a href="#contact"><span class="material-symbols-outlined iconcontact"> phone_enabled </span></a>
+            </div>
+            
             <ul class="header_menu menu">
-                <li>Acceuil</li>
-                <li>Destinations</li>
-                <li>Explorer</li>
-                <li>Contact</li>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#Destinations">Destinations</a></li>
+                <li><a href="#Explorer">Explorer</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
             
         </nav>
@@ -29,49 +32,127 @@
     <section class="slider">
         <h1 class="slider_titre">Le plus large choix d’hébergements au Cameroun</h1>
         <div class="slider_box">
-            <h2>Où souhaitez-vous réserver </h2>
+            <h2 class="titre">Où souhaitez-vous réserver</h2>
             <form action="" id="searchform">
-                <label for="rechercher"></label>
-                <input type="text" class="search" name="rechercher">
-                <button id="submit">Rechercher</button>
+                <select id="rechercher">
+                    <option value="./fr">Kribi</option>
+                    <option value="./cfr">Douala</option>
+                    <option value="https://yahoo.fr">Yaoundé</option>
+                    <option value="Ebolowa">Ébolowa</option>
+                </select>
+                <button id="submit"> <span class="material-symbols-outlined">search</span> <span>Rechercher</span> </button>
             </form>
         </div>
-        <div class="slider_brand">
-            <img src="./images/brands/abritel.png" alt="" class="abritel">
-            <img src="./images/brands/airbnb.jpeg" alt="" class="airbnb">
-            <img src="./images/brands/booking.png" alt="" class="booking">
-            <img src="./images/brands/lastminute.png" alt="" class="lastminute">
-        </div>
+        <ul class="slider_sliderl">
+            <li class="slider_slider"></li>
+            <li class="slider_slider1"></li>
+            <li class="slider_slider2"></li>
+            <li class="slider_slider3"></li>
+            <li class="slider_slider4"></li>
+        </ul>
     </section>
 
     <section class="top-rent">
         <h2 class="top-rent_titre">Nos meilleurs hebergement</h2>
         <div class="top-rent_hebergement">
+
+
+            <div class="top-rent_hebergement_box">
+                <a href="https://www.google.com"></a>
+                <img src="./images/apts/2.jpeg" alt="villa fages">
+                <div class="top-rent_hebergement_box details">
+                    <div class="titre-ville">
+                        <span class="titre-logement">Villa 8 personnes Kribi</span>
+                        <span class="ville-logement">Kribi</span>
+                    </div>
+                    <div class="prix-nuite">
+                        <span class="prix-logement">110 €</span>
+                        <span class="nuite"> nuit</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="top-rent_hebergement_box">
+                <a href="http://facebook.com"></a>
+                <img src="./images/apts/2.jpeg" alt="villa fages">
+                <div class="top-rent_hebergement_box details">
+                    <div class="titre-ville">
+                        <span class="titre-logement">Villa 8 personnes Kribi</span>
+                        <span class="ville-logement">Kribi</span>
+                    </div>
+                    <div class="prix-nuite">
+                        <span class="prix-logement">110 €</span>
+                        <span class="nuite"> nuit</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="top-rent_hebergement_box">
                 <img src="./images/apts/2.jpeg" alt="villa fages">
                 <div class="top-rent_hebergement_box details">
-                    <span>Villa 8 personnes</span>
-                    <span>110 € moyenne / nuit</span>
+                    <div class="titre-ville">
+                        <span class="titre-logement">Villa 8 personnes Kribi</span>
+                        <span class="ville-logement">Kribi</span>
+                    </div>
+                    <div class="prix-nuite">
+                        <span class="prix-logement">110 €</span>
+                        <span class="nuite"> nuit</span>
+                    </div>
                 </div>
             </div>
-            <div class="top-rent_hebergement">
-                <div class="top-rent_hebergement_box">
-                    <img src="./images/apts/2.jpeg" alt="villa fages">
-                    <div class="top-rent_hebergement_box details">
-                        <span>Villa 8 personnes</span>
-                        <span>110 € moyenne / nuit</span>
+
+            <div class="top-rent_hebergement_box">
+                <img src="./images/apts/2.jpeg" alt="villa fages">
+                <div class="top-rent_hebergement_box details">
+                    <div class="titre-ville">
+                        <span class="titre-logement">Villa 8 personnes Kribi</span>
+                        <span class="ville-logement">Kribi</span>
+                    </div>
+                    <div class="prix-nuite">
+                        <span class="prix-logement">110 €</span>
+                        <span class="nuite"> nuit</span>
                     </div>
                 </div>
-                <div class="top-rent_hebergement">
-                    <div class="top-rent_hebergement_box">
-                        <img src="./images/apts/2.jpeg" alt="villa fages">
-                        <div class="top-rent_hebergement_box details">
-                            <span>Villa 8 personnes</span>
-                            <span>110 € moyenne / nuit</span>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="top-rent_explorer">
+            <h2 class="top-rent_explorer titre">Explorez tous nos logements</h2>
+            <span class="top-rent_explorer btn-logements">
+                Nos logements
+            </span>
         </div>
     </section>
 
+    <footer class="footer">
+        <div class="footer_1">
+            <h3 class="footer_1 titre">Á propos de nous</h3>
+            <ul class="footer_liste">
+                <li class=" puce">Déposer une annonce</li>
+                <li class=" puce">Explorer nos logements</li>
+                <li class=" puce">Proposer une affaire</li>
+                <li class=" puce">Rencontrez-nous</li>
+            </ul>
+        </div>
+
+        <div class="footer_2">
+            <h3 class="footer_2 titre">Assistance</h3>
+            <ul class="footer_liste">
+                <li class=" puce">Signalez un problème</li>
+                <li class=" puce">Contactez-nous</li>
+            </ul>
+        </div>
+
+        <div class="footer_3">
+            <h3 class="footer_3 titre">Nos services</h3>
+            <ul class="footer_liste">
+                <li class=" puce">Location de voitures</li>
+                <li class=" puce">Excursions</li>
+                <li class=" puce">Billets d'avion</li>
+                <li class=" puce">Visa assistance</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>

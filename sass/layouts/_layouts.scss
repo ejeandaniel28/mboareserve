@@ -1,52 +1,99 @@
+#container{
+    @include mobile{
+        width: 100%;
+    }
+}
 .header{
     width: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     height: 4em;
     background-color: #637c99;
-    box-shadow: 0 0 0 3px greenyellow;
+    @include mobile{
+        justify-content: center;
+        flex-direction: column;
+    }
 
     .header_logo{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0.5em;
         .img{
             width: 10em;
+        }
+        @include mobile{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
     .header_menu{
         text-align: center;
-
-        .iconmenu{
-            position: absolute;
-            left: 1em;
-            top: 0.3em;
-            font-size: 2em;
+        a{
+            text-decoration: none;
+            color: #050300;
         }
-        .iconcontact{
-            position: absolute;
-            right: 1em;
-            top: 0.3em;
-            font-size: 2em;
+        .mobile-menu{
+            display: none;
+            .iconmenu{
+                position: absolute;
+                left: 1em;
+                top: 0.3em;
+                font-size: 2em;
+            }
+            .iconcontact{
+                position: absolute;
+                right: 1em;
+                top: 0.3em;
+                font-size: 2em;
+            }
+            @include mobile{
+                display: inline;
+            }
         }
         .menu{
-            display: none;
+            position: relative;
+            display: flex;
+            list-style: none;
+            a{
+                color: #c3baba;
+                font-family: $font-family2;
+                font-weight: bold;
+            }
+            li{
+                margin-left: 1em;
+            }
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                opacity: 0.9;
+                right: 0;
+                top: 3em;
+                line-height: 2em;
+                bottom: 0;
+                background-color: #050101;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 9em;
+                font-size: 1.2em;
+            }
         }
     }
 }
 
 
 .slider{
-    height: 40em;
-    background-color: rgb(223, 3, 52);
+    position: relative;
+    height: 30em;
+    @include mobile{
+        height: 35em;
+    }
 
     .slider_titre{
         text-align: center;
         padding-top: 1em;
-        color: whitesmoke;
+        color: #ffffffdb;
         font-size: 1.8em;
     }
     .slider_box{
@@ -55,37 +102,61 @@
         align-items: center;
         justify-content: space-around;
         margin: 1em auto 0 auto;
-        width: 90%;
+        width: 100%;
         height: 20em;
         background-color: whitesmoke;
         border-radius: 1em;
         box-shadow: 0.1em 0.1em 1em 0.3em rgb(80, 161, 138);
+        .titre{
+            margin-bottom: -4em;
+        }
         #searchform{
             display: flex;
             flex-direction: column;
-            .search{
-                text-align: center;
-                width: 15em;
-                height: 2.5em;
+            text-decoration: none;
+            #rechercher{
+                display: block;
+                text-align-last: center;
+                width: auto;
+                height: 3em;
                 border-radius: 1em;
-                margin-bottom: 4em;
+                margin-bottom: 1em;
+                text-overflow: '';
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                font-family: $font-family2;
+                font-size: 1.3em;
             }
             #submit{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 10em;
-                height: 5em;
-                margin: auto;
+                height: 4em;
+                margin-right: auto;
+                margin-left: auto;
+                border-radius: 1em;
+                color: white;
+                background-color: blueviolet;
+                border: none;
+                cursor: pointer;
+                font-family: $font-family2;
+                font-size: 1.2em;
             }
         }
-    }
-    .slider_brand{
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        margin-top: 1em;
-        img{
-            width: 5em;
-            border-radius: 10em;
-            opacity: 0.2;
+
+        @include tablet{
+            width: 25em;
+        }
+        @include laptop{
+            width: 35em;
+        }
+        @include desktop{
+            width: 40em;
+        }
+        @include desktopxxl{
+            width: 40em;
         }
     }
 }
@@ -96,11 +167,13 @@
     flex-direction: column;
 
     .top-rent_titre{
-        text-align: center;
+        @include h2;
+        margin-top: 1em;
     }
 
     .top-rent_hebergement{
-        
+        display: flex;
+        flex-wrap: wrap;
 
         
 
@@ -109,29 +182,110 @@
             flex-direction: column;
             align-items: center;
             width: 90%;
+            height: 20em;
             margin-left: auto;
             margin-right: auto;
             margin-top: 1em;
             margin-bottom: 1em;
-            border-radius: 2em;
+            border-radius: 1em;
             background-color: aliceblue;
-            box-shadow: 0.1em 0.1em 0.4em 0.1em rgb(85, 98, 66);
-            
-
+            cursor: pointer;
             img{
                 object-fit: cover;
-                height: 25em;
+                height: 80%;
                 width: 100%;
                 margin-left: auto;
                 margin-right: auto;
-                border-radius: 2em 2em 0 0;
+                border-radius: 1em 1em 0 0;
             }
 
             .details{
                 display: flex;
-                justify-content: center;
+                flex-direction: row;
                 height: 5em;
+                
+
+                .titre-ville{
+                    display: flex;
+                    flex-direction: column;
+                    width: 85%;
+                    .titre-logement{
+                        font-weight: lighter;
+                    }
+                    .ville-logement{
+                        margin-left: 1em;
+                        font-weight: bold;
+                    }
+                }
+                .prix-nuite{
+                    display: flex;
+                    flex-direction: column;
+                    .prix-logement{
+                        font-family: $font-family2;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            @include tablet{
+                width: 18em;
+            }
+            @include laptop{
+                width: 25em;
+            }
+            @include desktop{
+                width: 25em;
+            }
+            @include desktopxxl{
+                width: 25em;
             }
         }
+    }
+
+    .top-rent_explorer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .titre{
+            @include h2;
+            margin-bottom: 1em;
+        }
+        .btn-logements{
+            @include button-explorer;
+
+        }
+    }
+}
+
+.footer{
+    margin-top: 1em;
+    display: flex;
+    background-color: #f5f4f2;
+    flex-direction: column;
+    .footer_1{
+        @include footer-liste-style
+    }
+    .footer_2{
+        @include footer-liste-style
+    }
+    .footer_3{
+        @include footer-liste-style
+    }
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @include laptop{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @include desktopxxl{
+        flex-direction: row;
+        justify-content: space-around;
     }
 }

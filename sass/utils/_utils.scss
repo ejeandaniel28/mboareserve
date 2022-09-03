@@ -1,0 +1,69 @@
+@mixin h2 {
+    font-family: $font-family2;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+}
+
+@mixin button-explorer {
+    width: 8em;
+    padding: 0.3em 0.1em;
+    border: solid purple;
+    border-radius: 0.2em;
+}
+
+
+@mixin footer-liste-style {
+    margin-top: 1em;
+        margin-bottom: 0.5em;
+        margin-left: 1em;
+        .titre{
+            font-size: 1.3em;
+            font-family: $font-family2;
+            margin: 0;
+        }
+        .footer_liste{
+            list-style-type: none;
+            li{
+                font-size: 1em;
+            }
+        }
+}
+
+@mixin button-search {
+    
+}
+
+$breakpoints: (
+  mobile: 576px,
+  tablet: 768px,
+  laptop: 992px,
+  desktop: 1200px,
+  desktopxxl: 1400px
+);
+
+@mixin mobile {
+    @media screen and (max-width: map-get($breakpoints,mobile)) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: map-get($breakpoints,mobile)) and (max-width: map-get($breakpoints,tablet)) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: map-get($breakpoints,tablet)) and (max-width: map-get($breakpoints,laptop)) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: map-get($breakpoints,laptop)) and (max-width: map-get($breakpoints,desktop)) {
+        @content;
+    }
+}
+@mixin desktopxxl {
+    @media screen and (min-width: map-get($breakpoints,desktopxxl)){
+        @content;
+    }
+}
