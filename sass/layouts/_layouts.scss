@@ -54,6 +54,7 @@
             position: relative;
             display: flex;
             list-style: none;
+            right: 4;
             a{
                 color: #c3baba;
                 font-family: $font-family2;
@@ -63,20 +64,23 @@
                 margin-left: 1em;
             }
             @include mobile{
-                display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 opacity: 0.9;
                 right: 0;
-                top: 3em;
+                top: 3.1em;
                 line-height: 2em;
                 bottom: 0;
                 background-color: #050101;
                 position: absolute;
-                z-index: 2;
+                z-index: -1;
                 width: 100%;
                 height: 9em;
                 font-size: 1.2em;
+                transition: all ease-out 30ms;
+                li{
+                    border-bottom: whitesmoke solid;
+                }
             }
         }
     }
@@ -85,6 +89,8 @@
 
 .slider{
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
     height: 30em;
     @include mobile{
         height: 35em;
@@ -124,9 +130,9 @@
                 text-overflow: '';
                 -webkit-appearance: none;
                 -moz-appearance: none;
-
                 font-family: $font-family2;
                 font-size: 1.3em;
+                background: #c3baba;
             }
             #submit{
                 display: flex;
@@ -187,9 +193,15 @@
             margin-right: auto;
             margin-top: 1em;
             margin-bottom: 1em;
-            border-radius: 1em;
+            border-radius: 1em ;
             background-color: aliceblue;
             cursor: pointer;
+            transition: all 1s ease-out;
+            &:hover{
+                box-shadow: 0.1em 0.2em 0.2em 0 darkorange;
+                transition: all 0.4s ease-in-out;
+            }
+
             img{
                 object-fit: cover;
                 height: 80%;
@@ -199,30 +211,54 @@
                 border-radius: 1em 1em 0 0;
             }
 
+            a{
+                font-family: $font-family2;
+                position: absolute;
+                text-decoration: none;
+                color: whitesmoke;
+
+            }
+
             .details{
                 display: flex;
-                flex-direction: row;
-                height: 5em;
-                
-
+                margin: 0;
+                padding: 0;
+                border-radius: 0 0 1em 1em ;
                 .titre-ville{
                     display: flex;
-                    flex-direction: column;
-                    width: 85%;
+                    width: 100%;
+                    justify-content: space-between;
+                    margin-top: 0.5em;
                     .titre-logement{
-                        font-weight: lighter;
+                        margin-left: 1em;
+                        font-weight: bolder;
                     }
                     .ville-logement{
-                        margin-left: 1em;
-                        font-weight: bold;
+                        margin-right: 1em;
+                        font-weight: bolder;
                     }
                 }
                 .prix-nuite{
                     display: flex;
-                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+                    .apt-icons{
+                        display: flex;
+                        width: 60%;
+                        justify-content: space-between;
+                        margin-left: 0.5em;
+                        .apt-iconswork{
+                            display: flex;
+                        }
+                    }
                     .prix-logement{
+                        margin-right: 1em;
                         font-family: $font-family2;
+                        font-size: 1em;
                         font-weight: bold;
+                        @include mobile{
+                            margin-right: 0;
+                        }
                     }
                 }
             }

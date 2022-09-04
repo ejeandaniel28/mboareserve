@@ -1,19 +1,26 @@
-let homeAppart = document.querySelectorAll('.top-rent_hebergement_box.details');
+let menuIcon = document.querySelector('.iconmenu'); //USED FOR TOGLE MENU
+let menuList = document.querySelector('#menu');  // USED FOR TOGLE MENU
 
-let mobileMenu = document.querySelector('.iconmenu')
 
-for (let i=0;i<1;i++){
-
-    if(i=0){
-        mobileMenu
-        .addEventListener('click',function(e){
-            document.querySelector('.menu').style.zIndex = '-3'
-        })
+//        TOGGLE FOR TOGLE MENU
+menuIcon.addEventListener('click',function(e){
+    e.preventDefault()
+    if(!(menuList.style.zIndex =='1')){
+        menuList.style.zIndex = '1'
     }
+    else{
+        menuList.style.zIndex = '-1'
+    }
+})
 
-}
 
 
+
+
+
+
+
+let homeAppart = document.querySelectorAll('.top-rent_hebergement_box.details');
 // Boucle pour ouverture des lien contenue dans dans chaque conteneur a l'acceuil
 for (let i = 0;i<homeAppart.length;i++){
 
@@ -39,7 +46,3 @@ document
 .addEventListener('change',function(){
     selectLink();
 })
-
-
-
-

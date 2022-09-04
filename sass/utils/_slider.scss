@@ -1,11 +1,13 @@
+.slider_sliderl{
+    margin-left: auto;
+    margin-right: auto;
+}
 .slider_sliderl li {
     width: 100%;
     position: absolute;
-    z-index: -1;
     top: 0;
     bottom: 0;
     color: transparent;
-    background-size: 100% 100%;
     background-size: cover;
     background-position: center;
     opacity: 0;
@@ -14,7 +16,6 @@
 }
 
 .slider_sliderl li:nth-child(1){
-
     background-image: url('../../images/sliderhome/e.jpeg');
     
 }
@@ -35,8 +36,7 @@
 @keyframes sliderAnimation {
     0%{
         opacity: 1;
-        animation-timing-function: ease-in;
-        transform: scale(1.05)
+        animation-timing-function: ease-out;
     }
     25%{
         opacity: 1;
@@ -44,7 +44,7 @@
     }
     50%{
         opacity: 1;
-        transform: scale(1.02);
+        animation-timing-function: ease-in-out;
     }
     100%{
         opacity: 0;
