@@ -2,6 +2,7 @@ let menuIcon = document.querySelector('.iconmenu'); //USED FOR TOGLE MENU
 let menuList = document.querySelector('#menu');  // USED FOR TOGLE MENU
 
 
+
 //        TOGGLE FOR TOGLE MENU
 menuIcon.addEventListener('click',function(e){
     e.preventDefault()
@@ -12,10 +13,6 @@ menuIcon.addEventListener('click',function(e){
         menuList.style.zIndex = '-1'
     }
 })
-
-
-
-
 
 
 

@@ -51,6 +51,71 @@
   100% {
     opacity: 0;
     animation-timing-function: ease-out; } }
+.apt-titre-logement {
+  height: 4em;
+  display: flex;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  flex-direction: column;
+  background-color: whitesmoke; }
+  .apt-titre-logement .titre-logement_titre {
+    display: flex;
+    justify-content: center;
+    font-family: "Readex Pro", sans-serif;
+    font-size: 1.3em; }
+  .apt-titre-logement .titre-logement_slug {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5em;
+    margin-bottom: 2em; }
+    .apt-titre-logement .titre-logement_slug .slug {
+      font-size: 0.8em;
+      font-weight: lighter; }
+    .apt-titre-logement .titre-logement_slug .slugville {
+      font-size: 0.8em;
+      font-weight: lighter; }
+      @media screen and (max-width: 576px) {
+        .apt-titre-logement .titre-logement_slug .slugville {
+          display: none; } }
+
+#apt-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke; }
+  #apt-slider .apt-slider {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em; }
+    #apt-slider .apt-slider #featured {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      max-width: 60rem;
+      max-height: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0.2rem 0.2rem 1rem green; }
+    #apt-slider .apt-slider .tumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 1rem 2rem 1rem 2rem; }
+      #apt-slider .apt-slider .tumbnails .active {
+        opacity: 1 !important; }
+      #apt-slider .apt-slider .tumbnails .thumbnail {
+        margin-top: 1rem;
+        width: 4rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        opacity: 0.5; }
+        #apt-slider .apt-slider .tumbnails .thumbnail:hover {
+          box-shadow: 0.1rem 0.2rem 0.1rem white;
+          scale: 110%;
+          opacity: 1; }
+
 @media screen and (max-width: 576px) {
   #container {
     width: 100%; } }
@@ -218,11 +283,7 @@
       margin-bottom: 1em;
       border-radius: 1em;
       background-color: aliceblue;
-      cursor: pointer;
-      transition: all 1s ease-out; }
-      .top-rent .top-rent_hebergement .top-rent_hebergement_box:hover {
-        box-shadow: 0.1em 0.2em 0.2em 0 darkorange;
-        transition: all 0.4s ease-in-out; }
+      cursor: pointer; }
       .top-rent .top-rent_hebergement .top-rent_hebergement_box img {
         object-fit: cover;
         height: 80%;

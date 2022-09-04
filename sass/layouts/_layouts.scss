@@ -196,11 +196,6 @@
             border-radius: 1em ;
             background-color: aliceblue;
             cursor: pointer;
-            transition: all 1s ease-out;
-            &:hover{
-                box-shadow: 0.1em 0.2em 0.2em 0 darkorange;
-                transition: all 0.4s ease-in-out;
-            }
 
             img{
                 object-fit: cover;

@@ -1,0 +1,76 @@
+.apt-titre-logement{
+    height: 4em;
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    flex-direction: column;
+    background-color: whitesmoke;
+   .titre-logement_titre{
+    display: flex;
+    justify-content: center;
+    font-family: $font-family2;
+    font-size: 1.3em;
+   }
+   .titre-logement_slug{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    .slug{
+        font-size: 0.8em;
+        font-weight: lighter;
+    }
+    .slugville{
+        font-size: 0.8em;
+        font-weight: lighter;
+        @include mobile{
+            display: none;
+        }
+    }
+   }
+}
+
+#apt-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    .apt-slider{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+        #featured{
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            max-width: 60rem;
+            max-height: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0.2rem 0.2rem 1rem green;
+        }
+        .tumbnails{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 1rem 2rem 1rem 2rem;
+            .active{
+                opacity: 1 !important;
+            }
+            .thumbnail{
+                margin-top: 1rem;
+                width: 4rem;
+                object-fit: cover;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                opacity: 0.5;
+                &:hover{
+                    box-shadow: 0.1rem 0.2rem 0.1rem white;
+                    scale: 110%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
